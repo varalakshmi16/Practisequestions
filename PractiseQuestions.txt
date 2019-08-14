@@ -1,0 +1,207 @@
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class PractiseQuestions
+{
+	public static void main(String[] args) 
+	
+	{
+		
+		//to convert from character array to string
+		char[] c={'a','b','c'};
+		String str=new String(c);
+		System.out.println(str);
+		System.out.println("------------------------------");	
+		
+		
+		//to reverse a string and store in character array
+		String reverse="";
+		String sss="varalakshm";
+		for(int i=sss.length()-1;i>=0;i--)
+		{
+			reverse = reverse + sss. charAt(i);
+		}
+		System.out.println(sss);
+		System.out.println(reverse);
+		
+		char[] ch=new char[10];
+		for(int i=0;i<reverse.length();i++)
+		{
+			ch[i]=reverse.charAt(i);
+		}
+		
+		System.out.println(Arrays.toString(ch));
+		System.out.println("------------------------------");	
+		
+		
+		
+		//to sum the values in set (RAW) and store in integer array
+		
+		int sum=0;
+		Set set=new HashSet<>();
+		set.add(10);
+		set.add(20);
+		set.add(30);
+		Iterator ite=set.iterator();
+		
+		while(ite.hasNext())
+		{
+		int num=Integer.parseInt(ite.next().toString());
+		sum=sum+num;
+		}
+		System.out.println(sum);
+		
+		int j=0;
+		int[] arr=new int[set.size()];
+		Iterator ite2=set.iterator();
+		while(ite2.hasNext())
+		{
+			arr[j]=Integer.parseInt(ite2.next().toString());	
+			j++;
+		}
+		System.out.println(Arrays.toString(arr));
+		System.out.println("------------------------------");	
+		
+		
+		
+		
+		//to get current date and format 
+		
+		Date d=new Date();
+		System.out.println(d);
+		SimpleDateFormat sdf1= new SimpleDateFormat("dd-MMM-yyyy");
+		System.out.println(sdf1.format(d));
+		SimpleDateFormat sdf2= new SimpleDateFormat("DDD-MMM-yy");
+		System.out.println(sdf2.format(d));
+		
+		System.out.println("------------------------------");	
+		
+		
+		
+		
+		//to replace the characters in string
+		
+		String strr="ABC123";
+		
+		StringBuilder sb1=new StringBuilder();
+		StringBuilder sb2=new StringBuilder();
+
+		for(int i=0;i<strr.length();i++)
+		{
+		 Character charr=strr.charAt(i);
+		
+		 if(charr.isDigit(charr))
+		 {
+			sb1.append(charr);	
+		 }
+		
+		 if(charr.isAlphabetic(charr))
+		 {
+			sb2.append(charr);
+		 }
+		
+		}
+		System.out.println(sb1);
+		System.out.println(sb2);
+		System.out.println(sb1.append(sb2));
+		System.out.println("------------------------------");	
+		
+		
+		
+		//to find common elements in 2 list
+		
+		List<String> list1=new ArrayList<String>();
+		list1.add("one");
+		list1.add("two");
+		list1.add("three");
+
+		List<String> list2=new ArrayList<String>();
+		list2.add("two");
+		list2.add("three");
+		list2.add("four");
+		
+		list1.retainAll(list2);
+		System.out.println(list1);
+		System.out.println("------------------------------");	
+		
+		
+		
+	//to combine list and set values and put it in map
+	
+	int i = 0;
+	List<String> l=new ArrayList<String>();
+	l.add("ONE");
+	l.add("TWO");
+
+	System.out.println(l);
+	
+	Set<String> s=new HashSet<String>();
+	s.add("one");
+	s.add("two");
+	
+	System.out.println(s);
+	
+	Map<String,String>  m=new HashMap<String,String>();
+	
+	Iterator it=s.iterator();
+	while(it.hasNext())
+	{
+		m.put((String) it.next(), l.get(i));
+		i++;
+	}
+	
+	System.out.println(m);
+	System.out.println("------------------------------");	
+	
+	
+	//how to get key and values from map
+	
+	Map<String,String>  m1=new TreeMap<String,String>();
+	m1.put("opener1", "rohit");
+	m1.put("opener2", "Dhawan");
+	m1.put("opener3", "Kohli");
+	System.out.println(m1);
+	System.out.println("opener2 is:"+m1.get("opener2"));
+	System.out.println("Values is"+m1.values());
+	System.out.println("Keys are"+m1.keySet());
+	m1.put("opener2", "Rahul");
+	System.out.println(m1);
+	System.out.println("----------------------");
+
+    for(Entry<String, String> entry: m1.entrySet()) {
+        System.out.println(entry.getKey());
+        System.out.println(entry.getValue());
+    }
+	
+    System.out.println("------------------------");
+     
+    Set<String> s1=m1.keySet();
+	for(String st:s1)
+	{
+	System.out.println(st);
+	}
+
+    System.out.println("------------------------");
+
+	Collection<String> col=m1.values();
+	for(String st:col)
+	{
+	System.out.println(st);
+	}
+    System.out.println("------------------------");
+	
+	}
+			
+			
+}
