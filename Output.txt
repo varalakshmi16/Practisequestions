@@ -1,0 +1,44 @@
+abc
+------------------------------
+varalakshm
+mhskalarav
+[m, h, s, k, a, l, a, r, a, v]
+------------------------------
+60
+[20, 10, 30]
+------------------------------
+Wed Aug 14 17:44:23 IST 2019
+14-Aug-2019
+226-Aug-19
+------------------------------
+123
+ABC
+123ABC
+------------------------------
+[two, three]
+------------------------------
+[ONE, TWO]
+[one, two]
+{one=ONE, two=TWO}
+------------------------------
+{opener1=rohit, opener2=Dhawan, opener3=Kohli}
+opener2 is:Dhawan
+Values is[rohit, Dhawan, Kohli]
+Keys are[opener1, opener2, opener3]
+{opener1=rohit, opener2=Rahul, opener3=Kohli}
+----------------------
+opener1
+rohit
+opener2
+Rahul
+opener3
+Kohli
+------------------------
+opener1
+opener2
+opener3
+------------------------
+rohit
+Rahul
+Kohli
+------------------------
