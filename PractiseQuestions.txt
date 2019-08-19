@@ -21,7 +21,7 @@ public class PractiseQuestions
 		//to convert from character array to string
 		char[] c={'a','b','c'};
 		String str=new String(c);
-		System.out.println(str);
+		System.out.println(str);  //abc
 		System.out.println("------------------------------");	
 		
 		
@@ -32,8 +32,8 @@ public class PractiseQuestions
 		{
 			reverse = reverse + sss. charAt(i);
 		}
-		System.out.println(sss);
-		System.out.println(reverse);
+		System.out.println(sss); //varalakshm
+		System.out.println(reverse); //mhskalarav
 		
 		char[] ch=new char[10];
 		for(int i=0;i<reverse.length();i++)
@@ -41,7 +41,7 @@ public class PractiseQuestions
 			ch[i]=reverse.charAt(i);
 		}
 		
-		System.out.println(Arrays.toString(ch));
+		System.out.println(Arrays.toString(ch)); //[m, h, s, k, a, l, a, r, a, v]
 		System.out.println("------------------------------");	
 		
 		
@@ -60,7 +60,7 @@ public class PractiseQuestions
 		int num=Integer.parseInt(ite.next().toString());
 		sum=sum+num;
 		}
-		System.out.println(sum);
+		System.out.println(sum); //60
 		
 		int j=0;
 		int[] arr=new int[set.size()];
@@ -70,7 +70,7 @@ public class PractiseQuestions
 			arr[j]=Integer.parseInt(ite2.next().toString());	
 			j++;
 		}
-		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(arr)); // [20, 10, 30]
 		System.out.println("------------------------------");	
 		
 		
@@ -79,11 +79,11 @@ public class PractiseQuestions
 		//to get current date and format 
 		
 		Date d=new Date();
-		System.out.println(d);
+		System.out.println(d);  //Wed Aug 14 17:44:23 IST 2019
 		SimpleDateFormat sdf1= new SimpleDateFormat("dd-MMM-yyyy");
-		System.out.println(sdf1.format(d));
+		System.out.println(sdf1.format(d)); //14-Aug-2019
 		SimpleDateFormat sdf2= new SimpleDateFormat("DDD-MMM-yy");
-		System.out.println(sdf2.format(d));
+		System.out.println(sdf2.format(d)); //226-Aug-19
 		
 		System.out.println("------------------------------");	
 		
@@ -112,9 +112,9 @@ public class PractiseQuestions
 		 }
 		
 		}
-		System.out.println(sb1);
-		System.out.println(sb2);
-		System.out.println(sb1.append(sb2));
+		System.out.println(sb1); //123
+		System.out.println(sb2); //ABC
+		System.out.println(sb1.append(sb2)); //123ABC
 		System.out.println("------------------------------");	
 		
 		
@@ -132,7 +132,7 @@ public class PractiseQuestions
 		list2.add("four");
 		
 		list1.retainAll(list2);
-		System.out.println(list1);
+		System.out.println(list1); //[two, three]
 		System.out.println("------------------------------");	
 		
 		
@@ -144,13 +144,13 @@ public class PractiseQuestions
 	l.add("ONE");
 	l.add("TWO");
 
-	System.out.println(l);
+	System.out.println(l); //[ONE, TWO]
 	
 	Set<String> s=new HashSet<String>();
 	s.add("one");
 	s.add("two");
 	
-	System.out.println(s);
+	System.out.println(s); //[one, two]
 	
 	Map<String,String>  m=new HashMap<String,String>();
 	
@@ -161,7 +161,7 @@ public class PractiseQuestions
 		i++;
 	}
 	
-	System.out.println(m);
+	System.out.println(m); //{one=ONE, two=TWO}
 	System.out.println("------------------------------");	
 	
 	
@@ -171,19 +171,24 @@ public class PractiseQuestions
 	m1.put("opener1", "rohit");
 	m1.put("opener2", "Dhawan");
 	m1.put("opener3", "Kohli");
-	System.out.println(m1);
-	System.out.println("opener2 is:"+m1.get("opener2"));
-	System.out.println("Values is"+m1.values());
-	System.out.println("Keys are"+m1.keySet());
+	System.out.println(m1); //{opener1=rohit, opener2=Dhawan, opener3=Kohli}
+	System.out.println("opener2 is:"+m1.get("opener2")); //opener2 is:Dhawan
+	System.out.println("Values is"+m1.values()); //Values is[rohit, Dhawan, Kohli]
+	System.out.println("Keys are"+m1.keySet()); //Keys are[opener1, opener2, opener3]
 	m1.put("opener2", "Rahul");
-	System.out.println(m1);
+	System.out.println(m1); //{opener1=rohit, opener2=Rahul, opener3=Kohli}
 	System.out.println("----------------------");
 
     for(Entry<String, String> entry: m1.entrySet()) {
         System.out.println(entry.getKey());
         System.out.println(entry.getValue());
     }
-	
+	//opener1
+	rohit
+	opener2
+	Rahul
+	opener3
+	Kohli
     System.out.println("------------------------");
      
     Set<String> s1=m1.keySet();
@@ -191,6 +196,9 @@ public class PractiseQuestions
 	{
 	System.out.println(st);
 	}
+	//opener1
+	opener2
+	opener3
 
     System.out.println("------------------------");
 
@@ -199,6 +207,9 @@ public class PractiseQuestions
 	{
 	System.out.println(st);
 	}
+	//rohit
+	Rahul
+	Kohli
     System.out.println("------------------------");
 	
 	}
